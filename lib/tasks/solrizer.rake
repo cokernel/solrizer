@@ -53,7 +53,7 @@ namespace :solrizer do
 
   require 'rspec/core/rake_task'
   RSpec::Core::RakeTask.new(:rspec) do |spec|
-    spec.pattern = FileList['spec/**/*_spec.rb']
+    spec.pattern = FileList['spec/**/*_spec.rb'].to_a
   end
 
   RSpec::Core::RakeTask.new(:rcov) do |spec|
